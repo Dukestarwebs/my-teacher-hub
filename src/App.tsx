@@ -10,6 +10,10 @@ import Index from "./pages/Index";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 import PendingApproval from "./pages/PendingApproval";
+import AboutPage from "./pages/AboutPage";
+import CareersPage from "./pages/CareersPage";
+import ContactPage from "./pages/ContactPage";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 
 import StudentLayout from "./components/layouts/StudentLayout";
 import Dashboard from "./pages/student/Dashboard";
@@ -64,6 +68,10 @@ const App = () => (
             <Route path="/login" element={<Login />} />
             <Route path="/teacher/signup" element={<TeacherSignup />} />
             <Route path="/pending-approval" element={<PendingApproval />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/careers" element={<CareersPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/privacy" element={<PrivacyPolicyPage />} />
 
             {/* Student */}
             <Route element={<ProtectedRoute allowedRoles={["student"]}><StudentLayout /></ProtectedRoute>}>
