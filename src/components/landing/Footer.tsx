@@ -30,10 +30,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-3 md:mb-4 text-sm md:text-base">Company</h4>
             <ul className="space-y-2 text-sm opacity-70">
-              <li><a href="#" className="hover:opacity-100 transition-opacity">About Us</a></li>
-              <li><a href="#" className="hover:opacity-100 transition-opacity">Careers</a></li>
-              <li><a href="#" className="hover:opacity-100 transition-opacity">Contact</a></li>
-              <li><a href="#" className="hover:opacity-100 transition-opacity">Privacy Policy</a></li>
+              <li><Link to="/about" className="hover:opacity-100 transition-opacity">About Us</Link></li>
+              <li><Link to="/careers" className="hover:opacity-100 transition-opacity">Careers</Link></li>
+              <li><Link to="/contact" className="hover:opacity-100 transition-opacity">Contact</Link></li>
+              <li><Link to="/privacy" className="hover:opacity-100 transition-opacity">Privacy Policy</Link></li>
             </ul>
           </div>
 
