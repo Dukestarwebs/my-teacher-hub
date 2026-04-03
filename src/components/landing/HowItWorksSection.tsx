@@ -11,7 +11,7 @@ const steps = [
     icon: Search,
     step: "02",
     title: "Find Your Teacher",
-    description: "Browse qualified teachers by subject, availability, and ratings. Or chat with our AI Tutor instantly.",
+    description: "Browse qualified teachers by subject, availability, and ratings. Connect with the best fit for you.",
   },
   {
     icon: Rocket,
@@ -23,28 +23,28 @@ const steps = [
 
 const HowItWorksSection = () => {
   return (
-    <section id="how-it-works" className="py-20 bg-secondary">
+    <section id="how-it-works" className="py-14 md:py-20 bg-secondary">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <div className="text-center mb-10 md:mb-14">
+          <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-3 md:mb-4">
             How It <span className="text-primary">Works</span>
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto text-lg">
+          <p className="text-muted-foreground max-w-xl mx-auto text-sm md:text-lg">
             Getting started is simple — just three easy steps.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
           {steps.map((s, i) => (
             <div key={s.step} className="relative text-center animate-fade-in" style={{ animationDelay: `${i * 0.15}s` }}>
-              <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-6 text-xl font-bold shadow-lg">
+              <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-4 md:mb-6 text-lg md:text-xl font-bold shadow-lg">
                 {s.step}
               </div>
               {i < steps.length - 1 && (
                 <div className="hidden md:block absolute top-8 left-[60%] w-[80%] h-0.5 bg-border" />
               )}
-              <h3 className="text-lg font-semibold text-foreground mb-2">{s.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{s.description}</p>
+              <h3 className="text-base md:text-lg font-semibold text-foreground mb-2">{s.title}</h3>
+              <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{s.description}</p>
             </div>
           ))}
         </div>

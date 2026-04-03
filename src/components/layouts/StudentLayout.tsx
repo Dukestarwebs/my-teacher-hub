@@ -1,6 +1,6 @@
 import { Link, useLocation, Outlet } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
-import { Home, Search, Video, FileText, Brain, MessageSquare, Bell, User, LogOut, BookOpen } from "lucide-react";
+import { Home, Search, Video, FileText, MessageSquare, Bell, User, LogOut, BookOpen } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const navItems = [
@@ -8,7 +8,6 @@ const navItems = [
   { to: "/search", icon: Search, label: "Search" },
   { to: "/seminars", icon: Video, label: "Seminars" },
   { to: "/exams", icon: FileText, label: "Exams" },
-  { to: "/ai-tutor", icon: Brain, label: "AI Tutor" },
   { to: "/resources", icon: BookOpen, label: "Resources" },
   { to: "/messages", icon: MessageSquare, label: "Messages" },
   { to: "/notifications", icon: Bell, label: "Alerts" },
@@ -70,16 +69,16 @@ const StudentLayout = () => {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 pb-20 md:pb-0">
+      <main className="flex-1 pb-20 md:pb-0 min-w-0">
         <Outlet />
       </main>
 
       {/* Mobile Bottom Nav */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-card border-t border-border flex justify-around py-2 z-50">
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-card border-t border-border flex justify-around py-2 z-50 safe-area-bottom">
         {mobileNav.map((item) => {
           const active = location.pathname === item.to;
           return (
-            <Link key={item.to} to={item.to} className={`flex flex-col items-center gap-0.5 px-3 py-1 rounded-xl text-xs ${active ? "text-primary" : "text-muted-foreground"}`}>
+            <Link key={item.to} to={item.to} className={`flex flex-col items-center gap-0.5 px-2 py-1 rounded-xl text-xs ${active ? "text-primary" : "text-muted-foreground"}`}>
               <item.icon className="h-5 w-5" />
               {item.label}
             </Link>

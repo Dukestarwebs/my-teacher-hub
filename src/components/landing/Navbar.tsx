@@ -9,10 +9,10 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto flex items-center justify-between h-16 px-4">
+      <div className="container mx-auto flex items-center justify-between h-14 md:h-16 px-4">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="My Teacher" className="h-9 w-9" />
-          <span className="text-xl font-bold text-foreground">My Teacher</span>
+          <img src={logo} alt="My Teacher" className="h-8 w-8" />
+          <span className="text-lg md:text-xl font-bold text-foreground">My Teacher</span>
         </Link>
 
         {/* Desktop Nav */}

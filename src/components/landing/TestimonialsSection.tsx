@@ -4,7 +4,7 @@ const testimonials = [
   {
     name: "Anita Nakamya",
     role: "S4 Student, Kampala",
-    text: "My Teacher changed how I study! The AI tutor helped me understand chemistry concepts I'd struggled with for months.",
+    text: "My Teacher changed how I study! The live seminars helped me understand chemistry concepts I'd struggled with for months.",
     rating: 5,
   },
   {
@@ -23,22 +23,22 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section id="testimonials" className="py-20">
+    <section id="testimonials" className="py-14 md:py-20">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <div className="text-center mb-10 md:mb-14">
+          <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-3 md:mb-4">
             What Our <span className="text-primary">Community</span> Says
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto text-lg">
+          <p className="text-muted-foreground max-w-xl mx-auto text-sm md:text-lg">
             Hear from students and teachers across Uganda.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-4 md:gap-8">
           {testimonials.map((t, i) => (
             <div
               key={t.name}
-              className="bg-card rounded-2xl shadow-sm border border-border p-8 hover:shadow-md transition-all duration-200 animate-fade-in"
+              className="bg-card rounded-2xl shadow-sm border border-border p-6 md:p-8 hover:shadow-md transition-all duration-200 animate-fade-in"
               style={{ animationDelay: `${i * 0.15}s` }}
             >
               <div className="flex gap-1 mb-4">
@@ -46,7 +46,7 @@ const TestimonialsSection = () => {
                   <Star key={j} className="h-4 w-4 fill-primary text-primary" />
                 ))}
               </div>
-              <p className="text-foreground leading-relaxed mb-6">"{t.text}"</p>
+              <p className="text-sm md:text-base text-foreground leading-relaxed mb-4 md:mb-6">"{t.text}"</p>
               <div>
                 <p className="font-semibold text-foreground">{t.name}</p>
                 <p className="text-sm text-muted-foreground">{t.role}</p>
