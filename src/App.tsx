@@ -10,6 +10,10 @@ import Index from "./pages/Index";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 import PendingApproval from "./pages/PendingApproval";
+import AboutPage from "./pages/AboutPage";
+import CareersPage from "./pages/CareersPage";
+import ContactPage from "./pages/ContactPage";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 
 import StudentLayout from "./components/layouts/StudentLayout";
 import Dashboard from "./pages/student/Dashboard";
