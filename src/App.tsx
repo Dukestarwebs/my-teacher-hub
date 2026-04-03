@@ -21,7 +21,6 @@ import Resources from "./pages/student/Resources";
 import Exams from "./pages/student/Exams";
 import ExamTaking from "./pages/student/ExamTaking";
 import ExamResults from "./pages/student/ExamResults";
-import AiTutor from "./pages/student/AiTutor";
 import Messages from "./pages/student/Messages";
 import Notifications from "./pages/student/Notifications";
 import Progress from "./pages/student/Progress";
@@ -77,7 +76,6 @@ const App = () => (
               <Route path="/exams" element={<Exams />} />
               <Route path="/exams/:examId" element={<ExamTaking />} />
               <Route path="/exams/:examId/results" element={<ExamResults />} />
-              <Route path="/ai-tutor" element={<AiTutor />} />
               <Route path="/messages" element={<Messages />} />
               <Route path="/notifications" element={<Notifications />} />
               <Route path="/progress" element={<Progress />} />

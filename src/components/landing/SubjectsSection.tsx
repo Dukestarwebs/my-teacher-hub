@@ -12,25 +12,25 @@ const subjects = [
 
 const SubjectsSection = () => {
   return (
-    <section id="subjects" className="py-20">
+    <section id="subjects" className="py-14 md:py-20">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <div className="text-center mb-10 md:mb-14">
+          <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-3 md:mb-4">
             Popular <span className="text-primary">Subjects</span>
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto text-lg">
-            Find expert teachers and AI tutors across Uganda's core curriculum subjects.
+          <p className="text-muted-foreground max-w-xl mx-auto text-sm md:text-lg">
+            Find expert teachers across Uganda's core curriculum subjects.
           </p>
         </div>
 
-        <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory md:grid md:grid-cols-4 lg:grid-cols-7 md:overflow-visible">
+        <div className="flex gap-3 md:gap-4 overflow-x-auto pb-4 snap-x snap-mandatory md:grid md:grid-cols-4 lg:grid-cols-7 md:overflow-visible -mx-4 px-4 md:mx-0 md:px-0">
           {subjects.map((s) => (
             <div
               key={s.name}
-              className={`flex-shrink-0 snap-start flex flex-col items-center gap-3 p-6 rounded-2xl border ${s.color} hover:shadow-md transition-all duration-200 cursor-pointer min-w-[140px]`}
+              className={`flex-shrink-0 snap-start flex flex-col items-center gap-2 md:gap-3 p-4 md:p-6 rounded-2xl border ${s.color} hover:shadow-md transition-all duration-200 cursor-pointer min-w-[110px] md:min-w-[140px]`}
             >
-              <s.icon className="h-8 w-8" />
-              <span className="text-sm font-semibold whitespace-nowrap">{s.name}</span>
+              <s.icon className="h-7 w-7 md:h-8 md:w-8" />
+              <span className="text-xs md:text-sm font-semibold whitespace-nowrap">{s.name}</span>
             </div>
           ))}
         </div>
